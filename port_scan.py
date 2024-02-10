@@ -6,22 +6,22 @@ import time
 
 os.system('cls')
 banner = Fore.RED+ r"""
-                    ######################****************#######################
-                     ____            _        ____                                  
-                    |  _ \ ___  _ __| |_     / ___|  ___ __ _ _ __  _ __   ___ _ __ 
-                    | |_) / _ \| '__| __|    \___ \ / __/ _` | '_ \| '_ \ / _ \ '__|
-                    |  __/ (_) | |  | |_      ___) | (_| (_| | | | | | | |  __/ |   
-                    |_|   \___/|_|   \__|    |____/ \___\__,_|_| |_|_| |_|\___|_| 
+                    
+ ____            _        ____                                  
+|  _ \ ___  _ __| |_     / ___|  ___ __ _ _ __  _ __   ___ _ __ 
+| |_) / _ \| '__| __|    \___ \ / __/ _` | '_ \| '_ \ / _ \ '__|
+|  __/ (_) | |  | |_      ___) | (_| (_| | | | | | | |  __/ |   
+|_|   \___/|_|   \__|    |____/ \___\__,_|_| |_|_| |_|\___|_|   """
 
-                                      Version:1.0 - By: @gracious
-                                      https://github.com/graciousnm
-                                      Use at your own risk
-
-                    ######################****************#######################
+banner2 = Fore.WHITE + """
+                Version:1.0 - By: @Bernard-Appiah
+                https://github.com/graciousnm
+                Use at your own risk
 """
 print(banner)
+print(banner2)
 
-host = input("Enter the IP Address to Scan : "+ Fore.WHITE )
+host =  input("Enter the IP Address to Scan : "+ Fore.BLUE )
 print("\n" + Fore.BLUE +"[+] "+ Fore.YELLOW + "Scanning Ports for host : " + Fore.WHITE + host + "\n")
 time.sleep(3)
 
@@ -59,7 +59,7 @@ def thread_port(ports, host):
         t.join()
 
 
-ports = range(1, 63536)
+ports = range(1, 63535)
 
 #calling the thread function    
 thread_port(ports, host)
